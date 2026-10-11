@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Voice Academic Assistant — AI-Powered Student Chatbot</title>
+  <meta name="description"
+        content="An NLP-powered chatbot that helps college students with academic questions on NLP, AI/ML, Python, Java, Data Structures, DBMS, and more. Supports voice input and text-to-speech output." />
+  <meta name="keywords" content="academic chatbot, NLP chatbot, student assistant, voice chatbot, AI education, Flask chatbot" />
+  <meta name="author" content="Voice Academic Assistant Project" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Voice-Based Student Academic Assistance Chatbot" />
+  <meta property="og:description" content="Ask academic questions by typing or speaking. Get instant NLP-powered answers." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon (emoji fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE WRAPPER
+     ══════════════════════════════════════════════════════ -->
+<div class="page-wrapper">
+
+  <!-- ── HEADER ── -->
+  <header class="header" role="banner">
+    <div class="header-brand">
+      <div class="header-icon" aria-hidden="true">🎓</div>
+      <div class="header-text">
+        <h1>Voice Academic Assistant</h1>
+        <p>NLP-Powered Student Chatbot &nbsp;·&nbsp; Ask by voice or text</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="status-indicator" id="server-status" role="status" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Online</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── MAIN LAYOUT ── -->
+  <main class="main-layout" role="main">
+
+    <!-- ════════════════════════════════
+         CHAT PANEL (left / center)
+         ════════════════════════════════ -->
+    <section class="chat-panel" aria-label="Chat conversation">
+
+      <!-- Messages Area -->
+      <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-atomic="false">
+
+        <!-- Welcome Screen -->
+        <div class="welcome-message" id="welcome-message">
+          <span class="welcome-icon" aria-hidden="true">🎓</span>
+          <h2>Welcome to Academic Assistant!</h2>
+          <p>
+            Ask me anything about <strong>NLP, AI/ML, Python, Java,<br>
+            Data Structures, DBMS,</strong> or <strong>study tips</strong>.<br>
+            Type below or press the&nbsp;<strong>🎤</strong>&nbsp;microphone button!
+          </p>
+        </div>
+
+      </div><!-- /.chat-messages -->
+
+      <!-- Input Area -->
+      <div class="chat-input-area">
+
+        <!-- Mic Status Bar (shown during voice recording) -->
+        <div class="mic-status" id="mic-status" role="status" aria-live="assertive">
+          <span class="mic-status-dot" aria-hidden="true"></span>
+          <span id="mic-status-text">Listening… speak your question</span>
+        </div>
+
+        <!-- Input Row -->
+        <div class="input-row">
+          <!-- Microphone Button -->
+          <button
+            id="mic-btn"
+            class="btn-icon"
+            title="Click to speak your question (Chrome/Edge)"
+            aria-label="Start voice input"
+            type="button">
+            🎤
+          </button>
+
+          <!-- Text Input -->
+          <input
+            type="text"
+            id="message-input"
+            name="message"
+            placeholder="Ask an academic question… e.g. What is NLP?"
+            autocomplete="off"
+            aria-label="Type your academic question"
+            maxlength="500"
+          />
+
+          <!-- Send Button -->
+          <button
+            id="send-btn"
+            class="btn-icon"
+            title="Send message"
+            aria-label="Send message"
+            type="button">
+            ➤
+          </button>
+        </div><!-- /.input-row -->
+
+      </div><!-- /.chat-input-area -->
+    </section><!-- /.chat-panel -->
+
+
+    <!-- ════════════════════════════════
+         SIDEBAR (right)
+         ════════════════════════════════ -->
+    <aside class="sidebar" aria-label="Chat tools and suggestions">
+
+      <!-- ── Suggested Questions ── -->
+      <div class="sidebar-card">
+        <h3>💡 Try Asking</h3>
+        <div class="suggestions-list" id="suggestions-list" role="list">
+          <!-- Populated by script.js → loadSuggestions() -->
+          <p style="font-size:0.8rem; color:var(--text-muted);">Loading suggestions…</p>
+        </div>
+      </div>
+
+      <!-- ── Topic Filters ── -->
+      <div class="sidebar-card">
+        <h3>📚 Topics</h3>
+        <div class="topics-grid" role="navigation" aria-label="Topic filters">
+          <button class="topic-tag tag-nlp"    onclick="filterByTopic('nlp')"    aria-label="Filter by NLP">🧠 NLP</button>
+          <button class="topic-tag tag-ai_ml"  onclick="filterByTopic('ai_ml')"  aria-label="Filter by AI and ML">🤖 AI/ML</button>
+          <button class="topic-tag tag-python" onclick="filterByTopic('python')" aria-label="Filter by Python">🐍 Python</button>
+          <button class="topic-tag tag-java"   onclick="filterByTopic('java')"   aria-label="Filter by Java">☕ Java</button>
+          <button class="topic-tag tag-dsa"    onclick="filterByTopic('dsa')"    aria-label="Filter by Data Structures">🌲 DSA</button>
+          <button class="topic-tag tag-dbms"   onclick="filterByTopic('dbms')"   aria-label="Filter by DBMS">🗃️ DBMS</button>
+          <button class="topic-tag tag-exam"   onclick="filterByTopic('exam')"   aria-label="Filter by Exam tips">📝 Exams</button>
+          <button class="topic-tag tag-study"  onclick="filterByTopic('study')"  aria-label="Filter by Study tips">💡 Study</button>
+        </div>
+      </div>
+
+      <!-- ── Session Stats ── -->
+      <div class="sidebar-card">
+        <h3>📊 Session</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value" id="stat-questions">0</div>
+            <div class="stat-label">Questions Asked</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="stat-answered">0</div>
+            <div class="stat-label">Answered</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Clear Chat ── -->
+      <div class="sidebar-card">
+        <button id="clear-btn" aria-label="Clear all chat messages" type="button">
+          🗑️ Clear Conversation
+        </button>
+      </div>
+
+      <!-- ── Voice Tip ── -->
+      <div class="sidebar-card" style="font-size:0.78rem; color:var(--text-secondary); line-height:1.6;">
+        <h3>🎤 Voice Tips</h3>
+        <ul style="padding-left:16px; margin-top:4px;">
+          <li>Works best in <strong style="color:var(--text-primary)">Chrome</strong> or <strong style="color:var(--text-primary)">Edge</strong></li>
+          <li>Speak clearly after pressing 🎤</li>
+          <li>Grant microphone permission when prompted</li>
+          <li>🔊 Answers are read aloud automatically</li>
+        </ul>
+      </div>
+
+    </aside><!-- /.sidebar -->
+
+  </main><!-- /.main-layout -->
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <p>
+      Voice Academic Assistant &nbsp;·&nbsp;
+      Built with <span>Flask + NLTK + Web Speech API</span> &nbsp;·&nbsp;
+      College Mini Project &copy; 2024
+    </p>
+  </footer>
+
+</div><!-- /.page-wrapper -->
+
+<!-- Toast Notification Container -->
+<div id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+<!-- JavaScript -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

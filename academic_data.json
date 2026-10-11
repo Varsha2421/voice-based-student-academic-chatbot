@@ -1,0 +1,319 @@
+{
+  "greetings": {
+    "patterns": ["hello", "hi", "hey", "good morning", "good afternoon", "good evening", "howdy", "what's up", "greetings"],
+    "responses": [
+      "Hello! 👋 I'm your Academic Assistant. Ask me anything about your subjects!",
+      "Hi there, student! 😊 Ready to help you with your academics. What would you like to know?",
+      "Hey! Great to see you. I can help you with NLP, AI/ML, Python, Java, DSA, DBMS, and more!"
+    ]
+  },
+  "farewell": {
+    "patterns": ["bye", "goodbye", "see you", "take care", "quit", "exit", "thanks bye", "thank you bye"],
+    "responses": [
+      "Goodbye! All the best for your studies! 📚",
+      "See you later! Keep studying hard! 💪",
+      "Bye! Remember: consistency is the key to success! 🌟"
+    ]
+  },
+  "academic_qa": [
+    {
+      "id": 1,
+      "topic": "nlp",
+      "keywords": ["nlp", "natural language processing", "what is nlp"],
+      "question": "What is Natural Language Processing?",
+      "answer": "Natural Language Processing (NLP) is a branch of Artificial Intelligence that enables computers to understand, interpret, and generate human language. It combines computational linguistics, machine learning, and deep learning to process text and speech. Common NLP applications include chatbots, translators, sentiment analysis, and voice assistants like Siri and Alexa."
+    },
+    {
+      "id": 2,
+      "topic": "nlp",
+      "keywords": ["tokenization", "tokenize", "token", "nlp tokenization"],
+      "question": "What is tokenization in NLP?",
+      "answer": "Tokenization is the process of breaking a text into smaller units called tokens. These tokens can be words, sentences, or subwords. For example, 'I love NLP' becomes ['I', 'love', 'NLP']. It is the first step in most NLP pipelines and helps the model understand individual units of meaning."
+    },
+    {
+      "id": 3,
+      "topic": "nlp",
+      "keywords": ["stemming", "stem", "lemmatization", "lemmatize", "word root"],
+      "question": "What is stemming and lemmatization?",
+      "answer": "Stemming reduces a word to its root form by chopping off suffixes (e.g., 'running' → 'run'). Lemmatization is more advanced — it finds the dictionary base form (lemma) using vocabulary and grammar rules (e.g., 'better' → 'good'). Lemmatization is more accurate but slower. Both are used in NLP to normalize text."
+    },
+    {
+      "id": 4,
+      "topic": "nlp",
+      "keywords": ["stop words", "stopwords", "remove stop words", "common words"],
+      "question": "What are stop words in NLP?",
+      "answer": "Stop words are common words like 'is', 'the', 'a', 'and', 'in' that appear very frequently but carry little meaningful information. They are often removed during text preprocessing to reduce noise and improve the efficiency of NLP models. NLTK provides a built-in list of stop words for many languages."
+    },
+    {
+      "id": 5,
+      "topic": "nlp",
+      "keywords": ["tfidf", "tf-idf", "term frequency", "inverse document frequency"],
+      "question": "What is TF-IDF?",
+      "answer": "TF-IDF stands for Term Frequency–Inverse Document Frequency. It is a statistical measure used to evaluate how important a word is in a document relative to a collection of documents. TF measures how often a term appears in a document, while IDF penalizes terms that appear in many documents. TF-IDF is widely used in information retrieval and text mining."
+    },
+    {
+      "id": 6,
+      "topic": "ai_ml",
+      "keywords": ["artificial intelligence", "ai", "what is ai", "define ai"],
+      "question": "What is Artificial Intelligence?",
+      "answer": "Artificial Intelligence (AI) is the simulation of human intelligence by computer systems. It involves reasoning, learning, problem-solving, perception, and language understanding. AI is classified as Narrow AI (specific tasks like chess-playing) and General AI (human-like intelligence). AI is used in healthcare, finance, robotics, and many other fields."
+    },
+    {
+      "id": 7,
+      "topic": "ai_ml",
+      "keywords": ["machine learning", "ml", "what is machine learning", "define ml"],
+      "question": "What is Machine Learning?",
+      "answer": "Machine Learning (ML) is a subset of AI that allows computers to learn from data and improve their performance without being explicitly programmed. It involves training algorithms on datasets to recognize patterns and make predictions. ML is divided into supervised learning, unsupervised learning, and reinforcement learning."
+    },
+    {
+      "id": 8,
+      "topic": "ai_ml",
+      "keywords": ["supervised learning", "supervised", "labeled data"],
+      "question": "What is supervised learning?",
+      "answer": "Supervised learning is a type of machine learning where the model is trained on labeled data (input-output pairs). The algorithm learns to map inputs to outputs by minimizing the error between predictions and actual labels. Examples include classification (spam detection) and regression (house price prediction). Common algorithms: Linear Regression, Decision Trees, SVM, Neural Networks."
+    },
+    {
+      "id": 9,
+      "topic": "ai_ml",
+      "keywords": ["unsupervised learning", "unsupervised", "clustering", "unlabeled"],
+      "question": "What is unsupervised learning?",
+      "answer": "Unsupervised learning trains models on unlabeled data to find hidden patterns or groupings. The algorithm discovers structure in the data without predefined outputs. Common techniques include clustering (K-Means, DBSCAN) and dimensionality reduction (PCA, t-SNE). Applications include customer segmentation, anomaly detection, and topic modeling."
+    },
+    {
+      "id": 10,
+      "topic": "ai_ml",
+      "keywords": ["neural network", "deep learning", "neural net", "neuron", "deep neural"],
+      "question": "What is a neural network?",
+      "answer": "A neural network is a computing system inspired by biological neurons in the brain. It consists of layers of interconnected nodes (neurons): input layer, hidden layers, and output layer. Each connection has a weight that is adjusted during training. Deep Learning uses neural networks with many hidden layers to learn complex patterns from large datasets."
+    },
+    {
+      "id": 11,
+      "topic": "python",
+      "keywords": ["python", "what is python", "python language", "python programming"],
+      "question": "What is Python?",
+      "answer": "Python is a high-level, interpreted, general-purpose programming language known for its simple, readable syntax. Created by Guido van Rossum in 1991, Python emphasizes code readability and supports multiple programming paradigms (procedural, object-oriented, functional). It is widely used in web development, data science, AI/ML, automation, and scripting."
+    },
+    {
+      "id": 12,
+      "topic": "python",
+      "keywords": ["list comprehension", "list comprehensions", "python list"],
+      "question": "What is list comprehension in Python?",
+      "answer": "List comprehension is a concise way to create lists in Python using a single line of code. Syntax: [expression for item in iterable if condition]. Example: squares = [x**2 for x in range(10)] creates a list of squares from 0 to 81. List comprehensions are faster and more Pythonic than equivalent for-loops."
+    },
+    {
+      "id": 13,
+      "topic": "python",
+      "keywords": ["decorator", "decorators", "python decorator", "@"],
+      "question": "What are decorators in Python?",
+      "answer": "Decorators are functions that modify the behavior of another function without changing its source code. They use the @symbol syntax. A decorator wraps a function, adding pre/post-processing logic. Example: @login_required checks if a user is logged in before executing a view function. Built-in decorators include @staticmethod, @classmethod, and @property."
+    },
+    {
+      "id": 14,
+      "topic": "python",
+      "keywords": ["python oop", "object oriented python", "class python", "inheritance python"],
+      "question": "How does OOP work in Python?",
+      "answer": "Python supports Object-Oriented Programming (OOP) with classes and objects. Key OOP concepts: (1) Encapsulation — bundling data and methods in a class; (2) Inheritance — a child class inherits attributes from a parent class; (3) Polymorphism — same method name behaves differently for different classes; (4) Abstraction — hiding internal details. Use 'class ClassName:' to define a class."
+    },
+    {
+      "id": 15,
+      "topic": "java",
+      "keywords": ["java", "what is java", "java language", "java programming"],
+      "question": "What is Java?",
+      "answer": "Java is a high-level, object-oriented, platform-independent programming language developed by Sun Microsystems (now Oracle) in 1995. It follows the 'Write Once, Run Anywhere' (WORA) principle thanks to the Java Virtual Machine (JVM). Java is widely used in enterprise applications, Android development, web services, and embedded systems."
+    },
+    {
+      "id": 16,
+      "topic": "java",
+      "keywords": ["jvm", "java virtual machine", "bytecode", "platform independent"],
+      "question": "What is JVM and how does Java achieve platform independence?",
+      "answer": "The Java Virtual Machine (JVM) is an interpreter that executes Java bytecode. When you compile Java source code, it produces platform-independent bytecode (.class files). The JVM on any operating system interprets this bytecode and runs it. This is how Java achieves platform independence — the same bytecode runs on Windows, Linux, and Mac without modification."
+    },
+    {
+      "id": 17,
+      "topic": "java",
+      "keywords": ["java interface", "interface", "abstract class java", "abstract"],
+      "question": "What is the difference between interface and abstract class in Java?",
+      "answer": "An interface in Java is a contract that defines method signatures without implementation (until Java 8 default methods). A class implements an interface. An abstract class can have both abstract (no body) and concrete (with body) methods. Key differences: (1) A class can implement multiple interfaces but extend only one abstract class; (2) Interface variables are public, static, final by default; (3) Abstract classes can have constructors."
+    },
+    {
+      "id": 18,
+      "topic": "dsa",
+      "keywords": ["data structure", "data structures", "what is data structure", "dsa"],
+      "question": "What are data structures?",
+      "answer": "Data structures are ways of organizing and storing data in a computer so it can be accessed and modified efficiently. Common data structures include: Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Hash Tables, and Heaps. Choosing the right data structure is crucial for writing efficient algorithms and solving computational problems."
+    },
+    {
+      "id": 19,
+      "topic": "dsa",
+      "keywords": ["array", "arrays", "what is array"],
+      "question": "What is an array?",
+      "answer": "An array is a linear data structure that stores elements of the same type in contiguous memory locations. Each element is accessed by its index (starting from 0). Arrays offer O(1) time complexity for access by index but O(n) for search. Insertion and deletion can be O(n) due to shifting. Arrays are the foundation of many other data structures."
+    },
+    {
+      "id": 20,
+      "topic": "dsa",
+      "keywords": ["linked list", "linkedlist", "singly linked", "doubly linked", "node"],
+      "question": "What is a linked list?",
+      "answer": "A linked list is a linear data structure where elements (nodes) are stored in non-contiguous memory locations. Each node contains data and a pointer to the next node. Types: Singly Linked List (one pointer), Doubly Linked List (two pointers: next and previous), Circular Linked List. Insertion/deletion is O(1) at head, but access is O(n). Useful when size is dynamic."
+    },
+    {
+      "id": 21,
+      "topic": "dsa",
+      "keywords": ["stack", "lifo", "push", "pop", "stack data structure"],
+      "question": "What is a stack?",
+      "answer": "A stack is a linear data structure that follows the Last In, First Out (LIFO) principle. Elements are added (push) and removed (pop) from the same end called the top. Operations: push (O(1)), pop (O(1)), peek/top (O(1)). Applications include function call management (call stack), undo operations in editors, expression evaluation, and backtracking algorithms."
+    },
+    {
+      "id": 22,
+      "topic": "dsa",
+      "keywords": ["queue", "fifo", "enqueue", "dequeue", "queue data structure"],
+      "question": "What is a queue?",
+      "answer": "A queue is a linear data structure that follows the First In, First Out (FIFO) principle. Elements are added (enqueue) at the rear and removed (dequeue) from the front. Types: Simple Queue, Circular Queue, Priority Queue, Deque. Operations are O(1). Applications include CPU scheduling, printer spooling, BFS traversal, and message queuing systems."
+    },
+    {
+      "id": 23,
+      "topic": "dsa",
+      "keywords": ["binary tree", "tree", "bst", "binary search tree", "traversal"],
+      "question": "What is a binary tree and binary search tree?",
+      "answer": "A binary tree is a hierarchical data structure where each node has at most two children (left and right). A Binary Search Tree (BST) is a special binary tree where: left child < parent < right child. BST operations (search, insert, delete) average O(log n). Traversals: Inorder (left-root-right gives sorted order in BST), Preorder (root-left-right), Postorder (left-right-root)."
+    },
+    {
+      "id": 24,
+      "topic": "dsa",
+      "keywords": ["big o", "time complexity", "space complexity", "algorithm complexity", "asymptotic"],
+      "question": "What is time complexity and Big O notation?",
+      "answer": "Time complexity measures how the running time of an algorithm grows with input size. Big O notation describes the worst-case scenario. Common complexities: O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n) linearithmic, O(n²) quadratic, O(2ⁿ) exponential. For example, Binary Search is O(log n) and Bubble Sort is O(n²). Always aim for the lowest possible complexity."
+    },
+    {
+      "id": 25,
+      "topic": "dsa",
+      "keywords": ["sorting", "bubble sort", "merge sort", "quick sort", "selection sort", "insertion sort"],
+      "question": "What are the common sorting algorithms?",
+      "answer": "Common sorting algorithms: (1) Bubble Sort — O(n²), simple but slow; (2) Selection Sort — O(n²), finds minimum each pass; (3) Insertion Sort — O(n²) worst, O(n) best, good for nearly sorted data; (4) Merge Sort — O(n log n), stable, divide-and-conquer; (5) Quick Sort — O(n log n) average, O(n²) worst, in-place; (6) Heap Sort — O(n log n), uses a heap. Merge Sort is preferred for linked lists; Quick Sort for arrays."
+    },
+    {
+      "id": 26,
+      "topic": "dbms",
+      "keywords": ["dbms", "database management system", "what is dbms", "database"],
+      "question": "What is DBMS?",
+      "answer": "A Database Management System (DBMS) is software that manages databases — collections of organized data. It provides an interface between users/applications and the database. Functions include data storage, retrieval, update, and administration. Types: Relational (MySQL, PostgreSQL), NoSQL (MongoDB, Cassandra), Hierarchical, Network. Key advantages: data integrity, security, concurrent access, and reduced data redundancy."
+    },
+    {
+      "id": 27,
+      "topic": "dbms",
+      "keywords": ["sql", "structured query language", "what is sql", "query"],
+      "question": "What is SQL?",
+      "answer": "SQL (Structured Query Language) is the standard language for managing and querying relational databases. SQL commands are categorized as: DDL (CREATE, ALTER, DROP), DML (SELECT, INSERT, UPDATE, DELETE), DCL (GRANT, REVOKE), and TCL (COMMIT, ROLLBACK). Example: SELECT name FROM students WHERE marks > 80 ORDER BY name; retrieves student names with marks above 80."
+    },
+    {
+      "id": 28,
+      "topic": "dbms",
+      "keywords": ["normalization", "normal form", "1nf", "2nf", "3nf", "bcnf"],
+      "question": "What is normalization in databases?",
+      "answer": "Normalization is the process of organizing a database to reduce redundancy and improve data integrity. Normal Forms: (1) 1NF — Eliminate repeating groups, ensure atomic values; (2) 2NF — Remove partial dependencies (every non-key attribute depends on the full primary key); (3) 3NF — Remove transitive dependencies; (4) BCNF — Stronger form of 3NF. Normalization prevents anomalies during insert, update, and delete operations."
+    },
+    {
+      "id": 29,
+      "topic": "dbms",
+      "keywords": ["join", "sql join", "inner join", "left join", "right join", "outer join"],
+      "question": "What are SQL JOINs?",
+      "answer": "SQL JOINs combine rows from two or more tables based on a related column. Types: (1) INNER JOIN — returns rows with matching values in both tables; (2) LEFT JOIN — all rows from left table + matched rows from right; (3) RIGHT JOIN — all rows from right table + matched from left; (4) FULL OUTER JOIN — all rows from both tables; (5) CROSS JOIN — Cartesian product of both tables. JOINs are fundamental in relational database queries."
+    },
+    {
+      "id": 30,
+      "topic": "dbms",
+      "keywords": ["acid", "transaction", "atomicity", "consistency", "isolation", "durability"],
+      "question": "What are ACID properties in DBMS?",
+      "answer": "ACID properties ensure reliable database transactions: (1) Atomicity — a transaction is all-or-nothing; if one part fails, the entire transaction is rolled back; (2) Consistency — a transaction brings the database from one valid state to another; (3) Isolation — concurrent transactions do not interfere with each other; (4) Durability — once committed, a transaction persists even after system failure. ACID guarantees data integrity."
+    },
+    {
+      "id": 31,
+      "topic": "exam",
+      "keywords": ["exam preparation", "exam tips", "how to prepare", "study for exam", "examination"],
+      "question": "How should I prepare for exams?",
+      "answer": "Effective exam preparation strategies: (1) Start early — don't cram the night before; (2) Create a study schedule and stick to it; (3) Understand concepts rather than memorizing; (4) Practice past question papers; (5) Make concise notes and mind maps; (6) Use active recall techniques (flashcards, self-quizzing); (7) Take regular short breaks (Pomodoro Technique: 25 min study, 5 min break); (8) Get adequate sleep — memory consolidates during sleep; (9) Stay hydrated and eat well."
+    },
+    {
+      "id": 32,
+      "topic": "exam",
+      "keywords": ["assignment", "assignment tips", "submit assignment", "complete assignment"],
+      "question": "How do I complete assignments effectively?",
+      "answer": "Tips for effective assignments: (1) Read the requirements carefully before starting; (2) Break the assignment into smaller tasks; (3) Research from reliable sources (textbooks, journals, official docs); (4) Create an outline before writing; (5) Cite all references properly; (6) Start early to have time for revisions; (7) Proofread for errors before submission; (8) Use proper formatting as specified by the instructor. For coding assignments, test all edge cases and add comments."
+    },
+    {
+      "id": 33,
+      "topic": "study_tips",
+      "keywords": ["study tips", "how to study", "study effectively", "improve study", "better learning"],
+      "question": "What are effective study tips?",
+      "answer": "Proven study techniques: (1) Active Recall — test yourself instead of re-reading; (2) Spaced Repetition — review material at increasing intervals; (3) Feynman Technique — explain concepts in simple words as if teaching someone; (4) Mind Mapping — visually organize information; (5) SQ3R Method — Survey, Question, Read, Recite, Review; (6) Eliminate distractions (phone away, quiet space); (7) Study in groups for discussion; (8) Use multiple resources for the same topic."
+    },
+    {
+      "id": 34,
+      "topic": "study_tips",
+      "keywords": ["time management", "manage time", "procrastination", "productivity", "schedule"],
+      "question": "How can I improve my time management as a student?",
+      "answer": "Student time management strategies: (1) Use a planner or digital calendar; (2) Prioritize tasks using the Eisenhower Matrix (urgent vs. important); (3) Use the Pomodoro Technique for focused study sessions; (4) Set SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound); (5) Avoid multitasking — focus on one task at a time; (6) Review and plan your week every Sunday; (7) Say no to unnecessary commitments; (8) Track how you spend time using apps like Toggl."
+    },
+    {
+      "id": 35,
+      "topic": "python",
+      "keywords": ["exception handling", "try except", "error handling python", "try catch python"],
+      "question": "How does exception handling work in Python?",
+      "answer": "Python uses try-except blocks for exception handling. Syntax: try: (risky code), except ExceptionType as e: (handle error), else: (runs if no exception), finally: (always runs). Example: try: x = int(input()), except ValueError: print('Invalid input'). Common exceptions: ValueError, TypeError, FileNotFoundError, ZeroDivisionError, IndexError. Custom exceptions can be created by inheriting from the Exception class."
+    },
+    {
+      "id": 36,
+      "topic": "ai_ml",
+      "keywords": ["overfitting", "underfitting", "bias variance", "regularization"],
+      "question": "What is overfitting and underfitting in Machine Learning?",
+      "answer": "Overfitting occurs when a model learns the training data too well, including noise, resulting in poor performance on new data (high variance). Underfitting occurs when a model is too simple to capture patterns (high bias). Solutions for overfitting: regularization (L1/L2), dropout, more training data, cross-validation, early stopping. Solutions for underfitting: increase model complexity, add more features, train longer. The goal is to find the right balance."
+    },
+    {
+      "id": 37,
+      "topic": "dsa",
+      "keywords": ["graph", "graphs", "bfs", "dfs", "breadth first", "depth first"],
+      "question": "What are graphs and graph traversal algorithms?",
+      "answer": "A graph is a non-linear data structure with vertices (nodes) and edges (connections). Types: Directed/Undirected, Weighted/Unweighted, Cyclic/Acyclic. Traversal algorithms: (1) BFS (Breadth-First Search) — explores level by level using a queue, used for shortest path in unweighted graphs; (2) DFS (Depth-First Search) — explores as deep as possible using recursion/stack, used for cycle detection and topological sorting. Both are O(V+E) where V=vertices, E=edges."
+    },
+    {
+      "id": 38,
+      "topic": "nlp",
+      "keywords": ["bag of words", "bow", "word embedding", "word2vec", "text representation"],
+      "question": "What is Bag of Words and Word Embeddings?",
+      "answer": "Bag of Words (BoW) represents text as a frequency count of words, ignoring grammar and order. Example: 'I love NLP. NLP is great.' → {'I':1, 'love':1, 'NLP':2, 'is':1, 'great':1}. Word Embeddings (Word2Vec, GloVe) represent words as dense vectors in continuous space where similar words are geometrically close. Embeddings capture semantic relationships (e.g., king - man + woman ≈ queen), making them far more powerful than BoW."
+    },
+    {
+      "id": 39,
+      "topic": "dbms",
+      "keywords": ["index", "indexing", "database index", "b-tree index"],
+      "question": "What is indexing in databases?",
+      "answer": "Indexing is a technique to speed up data retrieval without scanning every row. A database index is like a book's index — it points directly to the location of data. Types: (1) Primary Index — on the primary key; (2) Secondary Index — on non-key attributes; (3) Clustered Index — data rows are sorted by the index; (4) Non-Clustered Index — separate structure pointing to data. B-Tree and Hash are common index structures. Indexes speed up SELECT but slow down INSERT/UPDATE/DELETE."
+    },
+    {
+      "id": 40,
+      "topic": "java",
+      "keywords": ["multithreading", "thread", "java thread", "concurrency java", "synchronized"],
+      "question": "What is multithreading in Java?",
+      "answer": "Multithreading allows multiple threads to execute concurrently within a single program, improving performance. In Java, threads are created by: (1) Extending the Thread class and overriding run(); (2) Implementing the Runnable interface. The synchronized keyword prevents thread interference (race conditions). Java provides the java.util.concurrent package with thread pools (ExecutorService), locks, and atomic variables for advanced concurrency. Each thread has its own stack but shares the heap."
+    },
+    {
+      "id": 41,
+      "topic": "ai_ml",
+      "keywords": ["reinforcement learning", "reward", "agent", "environment", "rl"],
+      "question": "What is Reinforcement Learning?",
+      "answer": "Reinforcement Learning (RL) is a type of ML where an agent learns by interacting with an environment and receiving rewards or penalties. The agent takes actions to maximize cumulative reward over time. Key components: Agent, Environment, State, Action, Reward, Policy. Famous algorithms: Q-Learning, SARSA, Deep Q-Network (DQN). Applications: game playing (AlphaGo), robotics, self-driving cars, and recommendation systems."
+    },
+    {
+      "id": 42,
+      "topic": "study_tips",
+      "keywords": ["concentration", "focus", "distraction", "mindfulness", "attention span"],
+      "question": "How do I improve focus and concentration while studying?",
+      "answer": "Techniques to improve study focus: (1) Eliminate digital distractions — use apps like Forest or Cold Turkey; (2) Create a dedicated study space; (3) Practice mindfulness meditation for 10 minutes daily; (4) Use background white noise or lo-fi music; (5) Set specific, time-bound study goals; (6) Take care of physical health — exercise, sleep 7-8 hours, eat nutritiously; (7) Start with the most difficult task when energy is highest (usually morning); (8) Use the 2-minute rule — if a task takes under 2 minutes, do it now."
+    }
+  ],
+  "fallback_responses": [
+    "I'm sorry, I couldn't find a specific answer to that question. Could you rephrase it or ask about NLP, AI/ML, Python, Java, Data Structures, DBMS/SQL, or study tips?",
+    "Hmm, that one's outside my current knowledge base. Try asking about topics like sorting algorithms, SQL queries, machine learning concepts, or Python programming!",
+    "I didn't quite understand that. I specialize in Computer Science and academic topics. Could you ask me about programming, data structures, databases, or study techniques?"
+  ]
+}
